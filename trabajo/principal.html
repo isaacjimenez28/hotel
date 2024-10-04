@@ -1,0 +1,117 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <link rel="stylesheet" href="diseño.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>CRUD</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a >inicio</i></a></li>
+               
+                <i class="material-icons" style="color: aliceblue;">account_circle</i>
+                <li><a href="#">Perfil</a></li>
+                <!-- Botón de reserva en la barra de navegación -->
+                <li><button id="openModal" class="nav-button">Agrega</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+      
+    </section>
+
+    <section class="table-section">
+        <h2>Lista de Reservaciones</h2>
+        <table>
+            <thead>
+              <tr>
+                  <th>Nombre</th>
+                  <th>Reservación</th>
+                  <th>Costo</th>
+                  <th>Dia</th>
+                  <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+                <td>10/09/2024</td>
+                <td>
+                    <div class="button-container">
+                        <button class="editar"><i class="material-icons">edit</i>Editar</button>
+                        <button class="borrar"><i class="material-icons">delete</i>Borrar</button>
+                    </div>                    
+                </td>
+                
+              </tr>
+              <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+                <td>11/09/2024   </td>
+               
+                <td>
+                    <div class="button-container">
+                        <button class="editar"><i class="material-icons">edit</i>Editar</button>
+                        <button class="borrar"><i class="material-icons">delete</i>Borrar</button>
+                    </div>                    
+                </td>              </tr>
+              <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+                <td>12/09/2024</td>
+                <td>
+                    <div class="button-container">
+                        <button class="editar"><i class="material-icons">edit</i>Editar</button>
+                        <button class="borrar"><i class="material-icons">delete</i>Borrar</button>
+                    </div>                    
+                </td>                   </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+    
+
+    <footer>
+        <p>La mejor reservación</p>
+    </footer>
+
+    <!-- Ventana modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reserva </h2>
+       
+            <!-- Ejemplo de formulario -->
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <br>
+                <label for="reservacion">Reservación:</label>
+                <input type="text" id="reservacion" name="reservacion">
+                <br>
+                <label for="costo">Costo:</label>
+                <input type="text" id="costo" name="costo">
+                <br>
+                <label for="dia">Día:</label>
+                <input type="date" id="dia" name="dia">
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+    <script src="funcion.js"></script>
+</body>
+</html>

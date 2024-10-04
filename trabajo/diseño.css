@@ -1,0 +1,311 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #296d8c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+header .logo h2 {
+    color: white;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a, .nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ffffff4d;
+    color: white;
+}
+
+footer {
+    background-color: #1b4b62;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5%;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('fondo.jpg') no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    animation: scale-up-center 0.8s ease;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Table Section */
+.table-section {
+   
+    padding: 20px;
+    position: absolute; /* Asegura que la tabla esté sobre la imagen */
+    top: 250; /* Ajusta la posición superior según sea necesario */
+    left: 50%; /* Centra la tabla horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado */
+    z-index: 10; /* Coloca la tabla por encima de la imagen */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-section h2 {
+    margin-bottom: 20px;
+    color: #296d8c;
+    font-size: 2em;
+}
+
+table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; 
+    z-index: 1000; /* Más alto que otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 5% auto;
+    padding: 20px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.modal.show .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+.close {
+    color: #333;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #296d8c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"], form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+form input[type="submit"] {
+    background-color: #296d8c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5f91c7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .table-section {
+        padding: 10px;
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 1.5em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .table-section {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Keyframes */
+@keyframes scale-up-center {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Estilos para el botón de Editar */
+.button-container {
+    display: flex; /* Utiliza flexbox para alinear los botones */
+    flex-direction: column; /* Alinea los botones en columna */
+    gap: 8px; /* Espacio entre los botones */
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+button.editar {
+    background-color: #FFA500; /* Naranja */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;   
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre icono y texto */
+}
+
+button.editar i {
+    font-size: 16px; /* Tamaño del icono */
+}
+
+/* Hover para el botón de Editar */
+button.editar:hover {
+    background-color: #ff8c00; /* Un poco más oscuro */
+}
+
+/* Estilos para el botón de Borrar */
+button.borrar {
+    background-color: #FF6347; /* Rojo Tomate */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre icono y texto */
+}
+
+button.borrar i {
+    font-size: 16px;
+}
+
+/* Hover para el botón de Borrar */
+button.borrar:hover {
+    background-color: #ff4c4c; /* Un poco más oscuro */
+}
+
+@media (max-width: 600px) {
+    button.editar,
+    button.borrar {
+        padding: 0.3rem 0.8rem; /* Reduce padding en pantallas pequeñas */
+        font-size: 0.5rem; /* Reduce el tamaño de la fuente */
+    }
+}
